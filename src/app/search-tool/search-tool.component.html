@@ -1,0 +1,144 @@
+<div class="form-group container">
+
+    <div class="row pt-4 pl-3">
+      <div class="col-sm-4"> 
+          <table>
+              <tr>
+                  <td class="alert alert-success">Select City</td>
+                  <td class="alert alert-primary">
+                    <select [(ngModel)]="selectedCity" class="form-control">
+                        <option>--Select--</option>
+                        <option *ngFor="let city of LstCities">{{city}}</option>
+                      </select>
+                  </td>
+              </tr>
+          </table> 
+      </div>      
+    </div>
+    
+    <div class="container">
+      
+      <div class="table table-dark table-striped" *ngIf = "selectedCity == 'Lucknow'">
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+            <th>Sr.No</th>
+            <th>RestaurantName</th>
+            <th>SpecialFor</th>
+            <th>Timings</th>
+            <th>Address</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let opt of dataLucknow">
+            <td>{{opt.SerialNumber}}</td>
+            <td>{{opt.RestaurantName}}</td>
+            <td>{{opt.SpecialFor}}</td>
+            <td>{{opt.Timings}}</td>
+            <td>{{opt.Address}}</td>  
+          </tr>          
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="col-sm-12" *ngIf = "selectedCity == 'Noida'">
+        <table>
+          <thead>
+            <tr>
+            <th>Sr.No</th>
+            <th>RestaurantName</th>
+            <th>SpecialFor</th>
+            <th>CostForTwo</th>
+            <th>Address</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let opt of dataNoida">
+            <td>{{opt.SerialNumber}}</td>
+            <td>{{opt.RestaurantName}}</td>
+            <td>{{opt.SpecialFor}}</td>
+            <td>{{opt.CostForTwo}}</td>
+            <td>{{opt.Address}}</td>  
+          </tr>          
+          </tbody>
+        </table>
+      </div>
+
+
+
+      <div class="col-sm-12" *ngIf = "selectedCity == 'Delhi'">
+        <table>
+          <thead>
+            <tr>
+            <th>Sr.No</th>
+            <th>RestaurantName</th>
+            <th>CostForTwo</th>
+            <th>Timings</th>
+            <th>Address</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let opt of dataDelhi">
+            <td>{{opt.SerialNumber}}</td>
+            <td>{{opt.RestaurantName}}</td>
+            <td>{{opt.CostForTwo}}</td>
+            <td>{{opt.Timings}}</td>
+            <td>{{opt.Address}}</td>  
+          </tr>          
+          </tbody>
+        </table>
+      </div>
+      
+
+      <div class="col-sm-12" *ngIf = "selectedCity == 'Kolkata'">
+        <table>
+          <thead>
+            <tr>
+            <th>Sr.No</th>
+            <th>RestaurantName</th>
+            <th>SpecialFor</th>
+            <th>Timings</th>
+            <th>Address</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let opt of dataKolkata">
+            <td>{{opt.SerialNumber}}</td>
+            <td>{{opt.RestaurantName}}</td>
+            <td>{{opt.SpecialFor}}</td>
+            <td>{{opt.Timings}}</td>
+            <td>{{opt.Address}}</td>  
+          </tr>          
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-sm-12" *ngIf = "selectedCity == 'Chandigarh'">
+        <table>
+          <thead>
+            <tr>
+            <th>Sr.No</th>
+            <th>RestaurantName</th>
+            <th>SpecialFor</th>
+            <th>Timings</th>
+            <th>Address</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let opt of dataChandigarh">
+            <td>{{opt.SerialNumber}}</td>
+            <td>{{opt.RestaurantName}}</td>
+            <td>{{opt.SpecialFor}}</td>
+            <td>{{opt.Timings}}</td>
+            <td>{{opt.Address}}</td>  
+          </tr>          
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+    
+  
+  </div>
+  
